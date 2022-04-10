@@ -1,46 +1,67 @@
-# Getting Started with Create React App
+## React Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Website that represents a simple storehouse (inventory), where user can select a certain category then a list of products attached to this category is shown. User can then choose a certain product and proceed to view the summary of his/her selections.
 
-## Available Scripts
+It is built using React.js, and relies on a backend built using strapi.
 
-In the project directory, you can run:
+## Backend
 
-### `yarn start`
+The Backend was built using <a href="https://docs.strapi.io/developer-docs/latest/getting-started/introduction.html">Strapi</a> which is an open-source headless CMS used for building fast and easily manageable APIs written in JavaScript. It enables developers to make flexible API structures easily using a beautiful user interface.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Frontend
 
-### `yarn test`
+The UI was built using React.js. It was meant to have a very simple design since the goal was to show the functionality and integration with strapi rather than having a beautiful design.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## Packages Used:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* `Material UI`: Used for the UI components
+* `Formik`: Used for handle form state
+* `Yup`: used to provide validation schema for the form
+* `Axios`: Used to make API calls to the backend
+* `Prettier`: Used to code formatting
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Use case Scenario
 
-### `yarn eject`
+* Fetch Categories and show them in a Select input
+* User select one category from the first select input
+* Get request is made to fetch the products of the selected category
+* User select one product
+* User clicks on Submit button
+* A show page is shown showing the summary of the selected items
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Website Link:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<a href="https://products-storehouse.herokuapp.com/">https://products-storehouse.herokuapp.com/</a>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Installation and Setup Instructions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
+* Open the project in any code editor (VsCode, WebStorm, etc.)
+* Run the following commands:
+  * `yarn install`: to install all the packages defined in the `package.json`
+  * `yarn start`: to run the project locally
+  * Using any browser open `localhost:3000`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Project Screenshots
+
+#### Home Page
+![Home Page](https://i.ibb.co/pdTtVPS/Screen-Shot-2022-04-11-at-12-15-33-AM.png)
+
+#### Trying to Submit without selecting all the required fields
+![Trying to Submit without selecting all the required fields](https://i.ibb.co/pr07kY2/Screen-Shot-2022-04-11-at-12-16-39-AM.png)
+
+#### Available Categories fetched from the database
+![Available Categories fetched from the database](https://i.ibb.co/KsfrGkP/Screen-Shot-2022-04-11-at-12-17-34-AM.png)
+
+#### Available Products fetched from the database based on the selected category
+![Available Products fetched from the database based on the selected category](https://i.ibb.co/K6jmgDs/Screen-Shot-2022-04-11-at-12-16-14-AM.png)
+
+#### Show Page (Summary Dialog) afte submitting the form
+![Show Page (Summary Dialog) afte submitting the form](https://i.ibb.co/h2TqP2b/Screen-Shot-2022-04-11-at-12-16-31-AM.png)
+
