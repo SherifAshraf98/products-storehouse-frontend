@@ -8,6 +8,17 @@ It is built using React.js, and relies on a backend built using strapi.
 
 The Backend was built using <a href="https://docs.strapi.io/developer-docs/latest/getting-started/introduction.html">Strapi</a> which is an open-source headless CMS used for building fast and easily manageable APIs written in JavaScript. It enables developers to make flexible API structures easily using a beautiful user interface.
 
+I used `Postgres` database, and here is the tables structure:
+* Categories
+  * id: number
+  * name: string (required)
+
+* Products
+  * id: number
+  * name: string (required)
+  * price: number (required)
+
+With one-to-many relationship between them
 
 ## Frontend
 
